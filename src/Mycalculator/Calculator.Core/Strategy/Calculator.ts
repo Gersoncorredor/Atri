@@ -1,9 +1,9 @@
-import { ICalculatorStrategy } from "./ICalculationStrategy";
+import { ICalculationStrategy } from "./ICalculationStrategy";
 
  class Calculator {
-    private strategy!: ICalculatorStrategy;
+    private strategy!: ICalculationStrategy;
 
-    public SetStrategy(Strategy: ICalculatorStrategy): void {
+    public SetStrategy(Strategy: ICalculationStrategy): void {
         this.strategy = Strategy ;
     }
 }

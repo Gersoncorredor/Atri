@@ -1,4 +1,4 @@
-import { ICalculationStrategy } from "./ICalculationStrategy";
+import { ICalculationStrategy } from "../ICalculationStrategy";
 import { IOperation } from "../../Factory/IOperation";
 
 class DefaultStrategy implements ICalculationStrategy  {

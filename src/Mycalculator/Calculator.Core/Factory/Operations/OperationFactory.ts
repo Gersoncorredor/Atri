@@ -17,7 +17,7 @@ export class CreateOperationFactory {
             case "r":
                 return new Reciprocal();
             case "a":
-                return new Square();
+                return new Square();    
             default:
                 throw new Error("Invalid operation type");
         }
