@@ -4,8 +4,8 @@
 ### 1. Clonar el repositorio
 
 ```bash
-git clone https://github.com/tu-usuario/tu-repositorio.git
-cd tu-repositorio
+git clone https://github.com/Gersoncorredor/Atri.git
+cd atri
 
 npm install
 npm run dev
