@@ -1,4 +1,4 @@
-import express, { Request, Response } from 'express';
+import express from 'express';
 import { CalculatorService } from './Calculator.Api/Service/CalculatorService';
 import { CalculationController } from './Calculator.Api/Controllers/CalculatorController';
 
