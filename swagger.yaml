@@ -1,0 +1,51 @@
+openapi: 3.0.0
+info:
+  title: API de Calculadora
+  version: 1.0.0
+  description: API que realiza operaciones entre dos números usando 'operation', 'a' y 'b'.
+
+servers:
+  - url: http://localhost:3000/api
+    description: Servidor local
+
+paths:
+  /calculator:
+    post:
+      summary: Realiza una operación matemática entre dos números
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - operation
+                - a
+                - b
+              properties:
+                operation:
+                  type: string
+                  description: Tipo de operación a realizar
+                  enum: [add, subtract, multiply, divide]
+                  example: add
+                a:
+                  type: number
+                  description: Primer número
+                  example: 10
+                b:
+                  type: number
+                  description: Segundo número
+                  example: 5
+      responses:
+        '200':
+          description: Resultado exitoso de la operación
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  result:
+                    type: number
+                    example: 15
+        '400':
+          description: Solicitud inválida (ej. operación no válida o división por cero)
