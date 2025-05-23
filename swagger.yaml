@@ -11,7 +11,7 @@ servers:
 paths:
   /calculator:
     post:
-      summary: Realiza una operación matemática entre dos números hola
+      summary: Realiza una operación matemática entre dos números
       requestBody:
         required: true
         content:
@@ -49,3 +49,11 @@ paths:
                     example: 15
         '400':
           description: Solicitud inválida (ej. operación no válida o división por cero)
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: División por cero no permitida
