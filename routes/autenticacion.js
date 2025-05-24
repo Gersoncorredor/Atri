@@ -2,7 +2,7 @@ const express = require("express");
 const bcryptjs = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const router = express.Router();
-const db = require("../Config/db");
+const db = require("../config/db");
 
 const SECRET_KEY = "joan123";
 let atemps = 0;

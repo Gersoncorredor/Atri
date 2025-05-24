@@ -8,7 +8,7 @@ app.use(express.json());
 const path = require("path");
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
-const db = require("./Config/db"); //Conexión a la base de datos
+const db = require("./config/db"); //Conexión a la base de datos
 
 const miniConsulta = require("./routes/miniConsultaSelect"); // Gestión de consultas pequeñas como generos o tipos de ID
 app.use("/miniConsultaSelect", miniConsulta);

@@ -1,7 +1,7 @@
 const express = require("express");
 const bcryptjs = require("bcryptjs");
 const router = express.Router();
-const db = require("../Config/db");
+const db = require("../config/db");
 
 /* Comienzo del Crud Citas  */
 router.get("/crudCita", (req, res) => {

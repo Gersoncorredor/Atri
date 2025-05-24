@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const db = require("../Config/db");
+const db = require("../config/db");
 
 router.get("/consultarIdentificacion", (req, res) => {
 
