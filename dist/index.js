@@ -10,8 +10,11 @@ const app = (0, express_1.default)();
 app.use(express_1.default.json());
 const calculatorService = new CalculatorService_1.CalculatorService();
 const calculationController = new CalculatorController_1.CalculationController(calculatorService);
+app.get('/', (req, res) => {
+    res.send('API está corriendo correctamente');
+});
 app.post('/calculate', calculationController.calculate.bind(calculationController));
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
     console.log(`puerto :${PORT}`);
 });
