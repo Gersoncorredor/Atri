@@ -86,7 +86,7 @@ export function SignIn() {
     }
     else {
       /* Envió de correo eléctronico */
-      Axios.post("http://localhost:3001/enviarCorreo/enviarCorreoRegistro", {
+      Axios.post("https://mi-api-node-eue0e8g4e7c8a9dz.brazilsouth-01.azurewebsites.net/enviarCorreo/enviarCorreoRegistro", {
         to: correo,
         subject: "Código para Registro",
       }).then((response) => {
@@ -102,7 +102,7 @@ export function SignIn() {
     if (codeRegistro === codigoRe) {
 
       /* Registro */
-      Axios.post("http://localhost:3001/autenticacion/registro", {
+      Axios.post("https://mi-api-node-eue0e8g4e7c8a9dz.brazilsouth-01.azurewebsites.net/autenticacion/registro", {
         numeroDocumento: ndocumento,
         idRol: 1,
         idTipoIdentificacion: tipodocumento,

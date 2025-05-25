@@ -36,7 +36,7 @@ function Login() {
     }
 
     /* Envió de datos para la autenticación */
-    Axios.post("http://localhost:3001/autenticacion/login", {
+    Axios.post("https://mi-api-node-eue0e8g4e7c8a9dz.brazilsouth-01.azurewebsites.net/autenticacion/login", {
       correo_i: correo_i,
       password_i: password_i,
     })
@@ -77,7 +77,7 @@ function Login() {
     try {
 
       /* Envió de correo eléctronico */
-      await Axios.post("http://localhost:3001/enviarCorreo/enviarCorreoPassword", {
+      await Axios.post("https://mi-api-node-eue0e8g4e7c8a9dz.brazilsouth-01.azurewebsites.net/enviarCorreo/enviarCorreoPassword", {
         to: forgotEmail,
         subject: "Restablecimiento de Contraseña",
       });
@@ -96,7 +96,7 @@ function Login() {
   const validarCodigo = async () => {
     try {
       const response = await Axios.post(
-        "http://localhost:3001/recuperarPassword/validarCodigo",
+        "https://mi-api-node-eue0e8g4e7c8a9dz.brazilsouth-01.azurewebsites.net/recuperarPassword/validarCodigo",
         {
           correo: forgotEmail,
           code: codigoV,
@@ -133,7 +133,7 @@ function Login() {
     }
 
     setShowForgotModal(false);
-    await Axios.patch("http://localhost:3001/recuperarPassword/cambiarPassword", {
+    await Axios.patch("https://mi-api-node-eue0e8g4e7c8a9dz.brazilsouth-01.azurewebsites.net/recuperarPassword/cambiarPassword", {
       correo: forgotEmail,
       password: password,
       codigo: codigoV,
